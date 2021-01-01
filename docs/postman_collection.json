@@ -1,0 +1,108 @@
+{
+    "info": {
+        "_postman_id": "5ac2d923-4123-4bd4-862b-e1aeaf88a98a",
+        "name": "freshworks",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "add_data",
+            "id": "0ec6d84b-65ce-4b16-b1fa-d150d48d7d34",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\":\"pen\",\n    \"price\":10,\n    \"description\":\"this is one of the good pen\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http:\/\/localhost:3000\/add_product?account_id=123&product_id=2",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "add_product"
+                    ],
+                    "query": [
+                        {
+                            "key": "account_id",
+                            "value": "123"
+                        },
+                        {
+                            "key": "product_id",
+                            "value": "2"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "fetch_data",
+            "id": "25fcd45b-96ae-46e0-bf35-dce3a8418ac4",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http:\/\/localhost:3000\/get_product?account_id=123&product_id=100",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "get_product"
+                    ],
+                    "query": [
+                        {
+                            "key": "account_id",
+                            "value": "123"
+                        },
+                        {
+                            "key": "product_id",
+                            "value": "100"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "delete_file",
+            "id": "427e5cc7-8a17-4c7b-b6b7-a21c886c21e7",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http:\/\/localhost:3000\/delete_product?account_id=123&product_id=2",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "delete_product"
+                    ],
+                    "query": [
+                        {
+                            "key": "account_id",
+                            "value": "123"
+                        },
+                        {
+                            "key": "product_id",
+                            "value": "2"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

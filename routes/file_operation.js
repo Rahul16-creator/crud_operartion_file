@@ -13,7 +13,7 @@ const resSender = require('../utils/http-route-response-sender');
 
 
 
-router.get('/get_product', validate({ query: schema.queryParamSchema}), (req, ...args) => reqHandler(Service.getDataById, req.query)(req, ...args), (req, res, next) => {
+router.get('/get_product', validate({ query: schema.queryParamSchema }), (req, ...args) => reqHandler(Service.getDataById, req.query)(req, ...args), (req, res, next) => {
     next()
 }, resSender);
 
@@ -23,7 +23,7 @@ router.post('/add_product', validate({ query: schema.queryParamSchema, body: sch
 }, resSender);
 
 
-router.delete('/delete_product', validate({ query: schema.queryParamSchema}), (req, ...args) => reqHandler(Service.deleteElemetById, req.query)(req, ...args), (req, res, next) => {
+router.delete('/delete_product', validate({ query: schema.queryParamSchema }), (req, ...args) => reqHandler(Service.deleteElemetById, req.query)(req, ...args), (req, res, next) => {
     next()
 }, resSender);
 
