@@ -14,6 +14,7 @@ module.exports = exports = function (method, ...args) {
             }
             next();
         }).catch((error) => {
+            console.log(error)
             res.locals.err = true
             res.locals.data.name = error._name || error.name
             res.locals.data.status = false
